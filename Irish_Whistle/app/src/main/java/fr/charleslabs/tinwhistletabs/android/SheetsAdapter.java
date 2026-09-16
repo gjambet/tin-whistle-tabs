@@ -10,7 +10,6 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Filter;
 import android.widget.Filterable;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -81,8 +80,8 @@ public class SheetsAdapter extends BaseAdapter implements Filterable {
             viewHolder.sheetName = convertView.findViewById(R.id.mainActivity_SheetName);
             viewHolder.sheetDetails = convertView.findViewById(
                     R.id.mainActivity_SheetDetails);
-            viewHolder.sheetImage = convertView.findViewById(
-                    R.id.mainActivity_sheetPicture);
+            viewHolder.whistleKeyBadge = convertView.findViewById(
+                    R.id.mainActivity_whistleKeyBadge);
             convertView.setTag(viewHolder);
         }
 
@@ -105,42 +104,12 @@ public class SheetsAdapter extends BaseAdapter implements Filterable {
 
         viewHolder.sheetName.setText(sheet.getTitle());
         viewHolder.sheetDetails.setText(context.getResources().getString(
-                R.string.mainActivity_sheetDetails_string,
-                sheet.getType(), sheet.getWhistle()));
-
-        switch (sheet.getType()) {
-            case "Reel":
-                viewHolder.sheetImage.setImageResource(R.drawable.reel);
-                break;
-            case "Jig":
-                viewHolder.sheetImage.setImageResource(R.drawable.jig);
-                break;
-            case "Slip Jig":
-                viewHolder.sheetImage.setImageResource(R.drawable.slipjig);
-                break;
-            case "Slide":
-                viewHolder.sheetImage.setImageResource(R.drawable.slide);
-                break;
-            case "Polka":
-                viewHolder.sheetImage.setImageResource(R.drawable.polka);
-                break;
-            case "March":
-                viewHolder.sheetImage.setImageResource(R.drawable.march);
-                break;
-            case "Hornpipe":
-                viewHolder.sheetImage.setImageResource(R.drawable.hornpipe);
-                break;
-            case "Song":
-                viewHolder.sheetImage.setImageResource(R.drawable.song);
-                break;
-            case "Waltz":
-                viewHolder.sheetImage.setImageResource(R.drawable.waltz);
-                break;
-            case "Misc.":
-            default:
-                viewHolder.sheetImage.setImageResource(R.drawable.misc);
-                break;
-        }
+                R.string.mainActivity_sheetDetails_string, sheet.getType()));
+        viewHolder.whistleKeyBadge.setText(sheet.getWhistle());
+        viewHolder.whistleKeyBadge.setContentDescription(
+                context.getResources().getString(
+                        R.string.mainActivity_whistleKey_description,
+                        sheet.getWhistle()));
 
         return convertView;
     }
@@ -228,6 +197,6 @@ public class SheetsAdapter extends BaseAdapter implements Filterable {
         CheckBox favoriteToggle;
         TextView sheetName;
         TextView sheetDetails;
-        ImageView sheetImage;
+        TextView whistleKeyBadge;
     }
 }
