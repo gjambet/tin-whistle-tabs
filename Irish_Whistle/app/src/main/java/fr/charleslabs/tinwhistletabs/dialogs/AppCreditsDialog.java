@@ -1,10 +1,11 @@
 package fr.charleslabs.tinwhistletabs.dialogs;
 
 import android.app.Dialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -15,25 +16,24 @@ import fr.charleslabs.tinwhistletabs.R;
 public class AppCreditsDialog extends DialogFragment {
     @NonNull
     @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState){
-        return new AlertDialog.Builder(requireActivity())
-                .setTitle(R.string.aboutDialog_title)
-                .setIcon(R.drawable.logo)
-                .setMessage(R.string.aboutDialog_message)
-                .setCancelable(true)
-                .setPositiveButton(getText(R.string.aboutDialog_okBtn), new DialogInterface.OnClickListener() {
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        View contentView = LayoutInflater.from(requireContext())
+                .inflate(R.layout.dialog_about, null, false);
+
+        TextView message = contentView.findViewById(R.id.aboutDialog_message);
+        message.setMovementMethod(LinkMovementMethod.getInstance());
+
+        contentView.findViewById(R.id.aboutDialog_close)
+                .setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
+                    public void onClick(View view) {
                         dismiss();
                     }
-                })
-                .setNegativeButton(getText(R.string.aboutDialog_websiteBtn), new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        Intent intent= new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.charleslabs.fr"));
-                        startActivity(intent);
-                    }
-                })
+                });
+
+        return new AlertDialog.Builder(requireActivity())
+                .setView(contentView)
+                .setCancelable(true)
                 .create();
     }
 }
