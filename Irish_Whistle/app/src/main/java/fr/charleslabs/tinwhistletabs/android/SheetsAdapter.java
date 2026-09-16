@@ -78,8 +78,6 @@ public class SheetsAdapter extends BaseAdapter implements Filterable {
             viewHolder.favoriteToggle = convertView.findViewById(
                     R.id.mainActivity_favoriteToggle);
             viewHolder.sheetName = convertView.findViewById(R.id.mainActivity_SheetName);
-            viewHolder.sheetDetails = convertView.findViewById(
-                    R.id.mainActivity_SheetDetails);
             viewHolder.whistleKeyBadge = convertView.findViewById(
                     R.id.mainActivity_whistleKeyBadge);
             convertView.setTag(viewHolder);
@@ -103,8 +101,6 @@ public class SheetsAdapter extends BaseAdapter implements Filterable {
                 });
 
         viewHolder.sheetName.setText(sheet.getTitle());
-        viewHolder.sheetDetails.setText(context.getResources().getString(
-                R.string.mainActivity_sheetDetails_string, sheet.getType()));
         viewHolder.whistleKeyBadge.setText(sheet.getWhistle());
         viewHolder.whistleKeyBadge.setContentDescription(
                 context.getResources().getString(
@@ -196,7 +192,6 @@ public class SheetsAdapter extends BaseAdapter implements Filterable {
     private static class ComponentViewHolder {
         CheckBox favoriteToggle;
         TextView sheetName;
-        TextView sheetDetails;
         TextView whistleKeyBadge;
     }
 }

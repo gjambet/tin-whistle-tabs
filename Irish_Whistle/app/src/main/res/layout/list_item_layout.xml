@@ -33,7 +33,7 @@
         android:id="@+id/mainActivity_SheetName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/mainActivity_whistleKeyBadge"
+        android:layout_centerVertical="true"
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@id/mainActivity_whistleKeyBadge"
         android:layout_toStartOf="@id/mainActivity_favoriteToggle"
@@ -42,16 +42,4 @@
         android:textColor="@android:color/black"
         android:textStyle="bold"
         tools:text="@string/mainActivity_sheetTitlePlaceholder" />
-
-    <TextView
-        android:id="@+id/mainActivity_SheetDetails"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@id/mainActivity_SheetName"
-        android:layout_below="@id/mainActivity_SheetName"
-        android:layout_toStartOf="@id/mainActivity_favoriteToggle"
-        android:ellipsize="end"
-        android:maxLines="2"
-        android:textColor="@android:color/darker_gray"
-        tools:text="@string/mainActivity_sheetDetailsPlaceholder" />
 </RelativeLayout>

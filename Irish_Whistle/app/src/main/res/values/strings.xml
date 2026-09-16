@@ -5,9 +5,7 @@
     <!-- List activity -->
     <string name="mainActivity_whistleKey_description">Required whistle key: %1$s</string>
     <string name="mainActivity_sheetTitlePlaceholder">Sheet title</string>
-    <string name="mainActivity_sheetDetailsPlaceholder">Sheet details</string>
     <string name="mainActivity_no_results">No results…</string>
-    <string name="mainActivity_sheetDetails_string">%1$s</string>
     <string name="favoriteToggle_description">Mark sheet as favourite</string>
 
     <!-- About dialog -->
