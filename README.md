@@ -10,6 +10,12 @@ Irish Whistle Tabs is an open-source tool to learn and improve your tin whistle 
 
 This repo contains the Android Studio project and the database generator.
 
+## Fork maintenance
+
+This fork preserves the original project attribution and is maintained by Guillaume Jambet.
+
+Every push to `master` automatically increments the patch component of the application version, increments `versionCode`, builds the debug APK, and publishes a GitHub prerelease named after that version (for example, `1.9.13`) with a matching tag (for example, `v1.9.13`).
+
 ## ToDo
 
 * Improve flute synth
