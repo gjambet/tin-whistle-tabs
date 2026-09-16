@@ -8,6 +8,7 @@
     <string name="mainActivity_sheetDetailsPlaceholder">Sheet details</string>
     <string name="mainActivity_no_results">No results…</string>
     <string name="mainActivity_sheetDetails_string">%1$s , %2$s</string>
+    <string name="favoriteToggle_description">Mark sheet as favourite</string>
 
     <!-- About dialog -->
     <string name="aboutDialog_title">About Irish Whistle Tabs</string>
