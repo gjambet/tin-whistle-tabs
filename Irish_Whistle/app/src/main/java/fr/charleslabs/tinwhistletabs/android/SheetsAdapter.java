@@ -18,7 +18,9 @@ import androidx.annotation.NonNull;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import fr.charleslabs.tinwhistletabs.R;
 import fr.charleslabs.tinwhistletabs.music.MusicSheet;
@@ -28,6 +30,7 @@ public class SheetsAdapter extends BaseAdapter implements Filterable {
 
     private final List<MusicSheet> sheets;
     private List<MusicSheet> sheetsFiltered;
+    private final Map<String, Integer> originalPositions;
     private final Context context;
     private final View noResult;
     private final SharedPreferences favoritePreferences;
@@ -39,6 +42,10 @@ public class SheetsAdapter extends BaseAdapter implements Filterable {
         this.favoritePreferences = context.getSharedPreferences(
                 FAVORITES_PREFERENCES, Context.MODE_PRIVATE);
         this.sheets = new ArrayList<>(sheets);
+        this.originalPositions = new HashMap<>();
+        for (int position = 0; position < this.sheets.size(); position++) {
+            originalPositions.put(favoriteKey(this.sheets.get(position)), position);
+        }
         sortFavoritesFirst(this.sheets);
         this.sheetsFiltered = new ArrayList<>(this.sheets);
     }
@@ -153,7 +160,10 @@ public class SheetsAdapter extends BaseAdapter implements Filterable {
                 boolean leftFavorite = isFavorite(left);
                 boolean rightFavorite = isFavorite(right);
                 if (leftFavorite == rightFavorite) {
-                    return 0;
+                    return Integer.compare(
+                            originalPositions.get(favoriteKey(left)),
+                            originalPositions.get(favoriteKey(right))
+                    );
                 }
                 return leftFavorite ? -1 : 1;
             }
