@@ -10,7 +10,8 @@
         android:id="@+id/mainActivity_favoriteToggle"
         android:layout_width="40dp"
         android:layout_height="50dp"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
         android:button="@android:drawable/btn_star"
         android:contentDescription="@string/favoriteToggle_description"
         android:focusable="false"
@@ -20,8 +21,7 @@
         android:id="@+id/mainActivity_sheetPicture"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="6dp"
-        android:layout_toEndOf="@id/mainActivity_favoriteToggle"
+        android:layout_alignParentStart="true"
         android:contentDescription="@string/mainActivity_sheetPicturePlaceholder"
         tools:background="#AAA" />
 
@@ -32,6 +32,9 @@
         android:layout_alignTop="@id/mainActivity_sheetPicture"
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@id/mainActivity_sheetPicture"
+        android:layout_toStartOf="@id/mainActivity_favoriteToggle"
+        android:ellipsize="end"
+        android:maxLines="1"
         android:textColor="@android:color/black"
         android:textStyle="bold"
         tools:text="@string/mainActivity_sheetTitlePlaceholder" />
@@ -42,6 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@id/mainActivity_SheetName"
         android:layout_below="@id/mainActivity_SheetName"
+        android:layout_toStartOf="@id/mainActivity_favoriteToggle"
         android:ellipsize="end"
         android:maxLines="2"
         android:textColor="@android:color/darker_gray"
