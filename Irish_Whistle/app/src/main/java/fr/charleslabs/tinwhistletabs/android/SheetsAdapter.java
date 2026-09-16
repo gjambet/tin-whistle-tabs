@@ -150,7 +150,12 @@ public class SheetsAdapter extends BaseAdapter implements Filterable {
         Collections.sort(list, new Comparator<MusicSheet>() {
             @Override
             public int compare(MusicSheet left, MusicSheet right) {
-                return Boolean.compare(isFavorite(right), isFavorite(left));
+                boolean leftFavorite = isFavorite(left);
+                boolean rightFavorite = isFavorite(right);
+                if (leftFavorite == rightFavorite) {
+                    return 0;
+                }
+                return leftFavorite ? -1 : 1;
             }
         });
     }
