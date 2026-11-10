@@ -37,9 +37,7 @@ public class InstrumentedTest {
         // Test proper sheets read
         List<MusicSheet> sheets = MusicDB.getInstance(appContext).musicDB;
         for (MusicSheet sheet : sheets){
-            sheet.readNotes(appContext);
-
-            for(MusicNote note:sheet.notes) {
+            for (MusicNote note : MusicDB.open(appContext, sheet.getFile())) {
                 assertNotEquals(sheet.getTitle()+" contains invalid notes",note.toTab(),"?");
                 if (note.toTab().equals("?")){
                     Log.e("INVALID NOTE",sheet.getTitle());

@@ -122,23 +122,19 @@ public class TabActivity extends AppCompatActivity implements TempoDialog.TempoC
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.tabAction_tempo:
-                final DialogFragment tempoDialog = new TempoDialog(tempo, MusicSettings.isStartDelayed, this);
-                tempoDialog.show(getSupportFragmentManager(),"dialog");
-                break;
-            case R.id.tabAction_key:
-                final DialogFragment keyDialog = new KeyDialog(MusicSettings.currentKey, this);
-                keyDialog.show(getSupportFragmentManager(),"dialog");
-                break;
-            case R.id.tabAction_more:
-                final SheetInfoDialog sheetInfoDialog = new SheetInfoDialog(getApplicationContext(), sheet);
-                sheetInfoDialog.show(getSupportFragmentManager(),"dialog");
-                break;
-            case android.R.id.home:
-                this.stop();
-                finish();
-                break;
+        int itemId = item.getItemId();
+        if (itemId == R.id.tabAction_tempo) {
+            final DialogFragment tempoDialog = new TempoDialog(tempo, MusicSettings.isStartDelayed, this);
+            tempoDialog.show(getSupportFragmentManager(),"dialog");
+        } else if (itemId == R.id.tabAction_key) {
+            final DialogFragment keyDialog = new KeyDialog(MusicSettings.currentKey, this);
+            keyDialog.show(getSupportFragmentManager(),"dialog");
+        } else if (itemId == R.id.tabAction_more) {
+            final SheetInfoDialog sheetInfoDialog = new SheetInfoDialog(getApplicationContext(), sheet);
+            sheetInfoDialog.show(getSupportFragmentManager(),"dialog");
+        } else if (itemId == android.R.id.home) {
+            this.stop();
+            finish();
         }
         return true;
     }

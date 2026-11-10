@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 33
+    compileSdkVersion 36
 
     defaultConfig {
         applicationId "me.guillaume.tin_whistle_tabs"
         minSdkVersion 16
-        targetSdkVersion 33
+        targetSdkVersion 36
         versionCode 39
         versionName "1.9.25"
 
