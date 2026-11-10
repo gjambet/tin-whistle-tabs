@@ -1,4 +1,4 @@
-package fr.charleslabs.tinwhistletabs;
+package me.guillaume.tin_whistle_tabs;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -17,13 +17,13 @@ import androidx.fragment.app.DialogFragment;
 
 import java.util.List;
 
-import fr.charleslabs.tinwhistletabs.android.SheetsAdapter;
-import fr.charleslabs.tinwhistletabs.dialogs.AppCreditsDialog;
-import fr.charleslabs.tinwhistletabs.music.MusicDB;
-import fr.charleslabs.tinwhistletabs.music.MusicSheet;
+import me.guillaume.tin_whistle_tabs.android.SheetsAdapter;
+import me.guillaume.tin_whistle_tabs.dialogs.AppCreditsDialog;
+import me.guillaume.tin_whistle_tabs.music.MusicDB;
+import me.guillaume.tin_whistle_tabs.music.MusicSheet;
 
 public class MainActivity extends AppCompatActivity  {
-    public static final String EXTRA_SHEET= "fr.charleslabs.tinwhistletabs.SHEET";
+    public static final String EXTRA_SHEET= "me.guillaume.tin_whistle_tabs.SHEET";
     private SheetsAdapter adapter;
 
     @Override

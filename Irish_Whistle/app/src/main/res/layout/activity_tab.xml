@@ -9,7 +9,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context="fr.charleslabs.tinwhistletabs.TabActivity"
+        tools:context="me.guillaume.tin_whistle_tabs.TabActivity"
         android:id="@+id/TabActivity_tabScrollPane"
         android:layout_above="@id/TabActivity_mediaBtn"
         android:layout_alignParentTop="true">

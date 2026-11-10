@@ -1,4 +1,4 @@
-package fr.charleslabs.tinwhistletabs.utils;
+package me.guillaume.tin_whistle_tabs.utils;
 
 import java.io.IOException;
 import java.io.InputStream;

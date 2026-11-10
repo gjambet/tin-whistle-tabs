@@ -1,4 +1,4 @@
-package fr.charleslabs.tinwhistletabs.music;
+package me.guillaume.tin_whistle_tabs.music;
 
 import android.media.AudioFormat;
 import android.media.AudioManager;
@@ -8,7 +8,7 @@ import android.os.Handler;
 
 import java.util.List;
 
-import fr.charleslabs.tinwhistletabs.music.synth.TinWhistleSynth;
+import me.guillaume.tin_whistle_tabs.music.synth.TinWhistleSynth;
 
 public class MusicPlayer {
     private static final int SAMPLE_RATE = 22050;

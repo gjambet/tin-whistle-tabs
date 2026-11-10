@@ -1,4 +1,4 @@
-package fr.charleslabs.tinwhistletabs.music;
+package me.guillaume.tin_whistle_tabs.music;
 
 import android.content.Context;
 
@@ -9,8 +9,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.charleslabs.tinwhistletabs.R;
-import fr.charleslabs.tinwhistletabs.utils.Utils;
+import me.guillaume.tin_whistle_tabs.R;
+import me.guillaume.tin_whistle_tabs.utils.Utils;
 
 public class MusicDB {
     public List<MusicSheet> musicDB = new ArrayList<>();

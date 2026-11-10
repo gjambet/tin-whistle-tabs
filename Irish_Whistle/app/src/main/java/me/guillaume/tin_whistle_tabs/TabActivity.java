@@ -1,4 +1,4 @@
-package fr.charleslabs.tinwhistletabs;
+package me.guillaume.tin_whistle_tabs;
 
 import android.animation.ObjectAnimator;
 import android.content.Intent;
@@ -23,22 +23,22 @@ import androidx.fragment.app.DialogFragment;
 
 import java.util.List;
 
-import fr.charleslabs.tinwhistletabs.android.SingleTapTouchListener;
-import fr.charleslabs.tinwhistletabs.android.TextViewScaleGestureDetector;
-import fr.charleslabs.tinwhistletabs.dialogs.KeyDialog;
-import fr.charleslabs.tinwhistletabs.dialogs.SheetInfoDialog;
-import fr.charleslabs.tinwhistletabs.dialogs.TempoDialog;
-import fr.charleslabs.tinwhistletabs.music.MusicDB;
-import fr.charleslabs.tinwhistletabs.music.MusicNote;
-import fr.charleslabs.tinwhistletabs.music.MusicPlayer;
-import fr.charleslabs.tinwhistletabs.music.MusicSettings;
-import fr.charleslabs.tinwhistletabs.music.MusicSheet;
-import fr.charleslabs.tinwhistletabs.utils.AndroidUtils;
+import me.guillaume.tin_whistle_tabs.android.SingleTapTouchListener;
+import me.guillaume.tin_whistle_tabs.android.TextViewScaleGestureDetector;
+import me.guillaume.tin_whistle_tabs.dialogs.KeyDialog;
+import me.guillaume.tin_whistle_tabs.dialogs.SheetInfoDialog;
+import me.guillaume.tin_whistle_tabs.dialogs.TempoDialog;
+import me.guillaume.tin_whistle_tabs.music.MusicDB;
+import me.guillaume.tin_whistle_tabs.music.MusicNote;
+import me.guillaume.tin_whistle_tabs.music.MusicPlayer;
+import me.guillaume.tin_whistle_tabs.music.MusicSettings;
+import me.guillaume.tin_whistle_tabs.music.MusicSheet;
+import me.guillaume.tin_whistle_tabs.utils.AndroidUtils;
 
 public class TabActivity extends AppCompatActivity implements TempoDialog.TempoChangeCallback,
         KeyDialog.KeyChangeCallback, SingleTapTouchListener.SingleTapCallback {
-    public static final String EXTRA_ABC= "fr.charleslabs.tinwhistletabs.ABC";
-    public static final String EXTRA_SHEET_TITLE= "fr.charleslabs.tinwhistletabs.SHEET_TITLE";
+    public static final String EXTRA_ABC= "me.guillaume.tin_whistle_tabs.ABC";
+    public static final String EXTRA_SHEET_TITLE= "me.guillaume.tin_whistle_tabs.SHEET_TITLE";
     public static final float START_DELAY_AMOUNT = 1.5f; // s
     private static final int COUNTDOWN_STEPS = 3;
     private static final int SCROLL_DURATION = 750; // ms

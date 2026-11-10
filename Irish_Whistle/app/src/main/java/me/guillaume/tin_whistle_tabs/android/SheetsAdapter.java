@@ -1,4 +1,4 @@
-package fr.charleslabs.tinwhistletabs.android;
+package me.guillaume.tin_whistle_tabs.android;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -21,8 +21,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import fr.charleslabs.tinwhistletabs.R;
-import fr.charleslabs.tinwhistletabs.music.MusicSheet;
+import me.guillaume.tin_whistle_tabs.R;
+import me.guillaume.tin_whistle_tabs.music.MusicSheet;
 
 public class SheetsAdapter extends BaseAdapter implements Filterable {
     private static final String FAVORITES_PREFERENCES = "favorite_sheets";

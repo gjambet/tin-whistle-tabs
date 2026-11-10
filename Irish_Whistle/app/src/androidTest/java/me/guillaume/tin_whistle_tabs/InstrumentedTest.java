@@ -1,4 +1,4 @@
-package fr.charleslabs.tinwhistletabs;
+package me.guillaume.tin_whistle_tabs;
 
 import android.content.Context;
 import android.util.Log;
@@ -14,9 +14,9 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-import fr.charleslabs.tinwhistletabs.music.MusicDB;
-import fr.charleslabs.tinwhistletabs.music.MusicNote;
-import fr.charleslabs.tinwhistletabs.music.MusicSheet;
+import me.guillaume.tin_whistle_tabs.music.MusicDB;
+import me.guillaume.tin_whistle_tabs.music.MusicNote;
+import me.guillaume.tin_whistle_tabs.music.MusicSheet;
 
 import static org.junit.Assert.*;
 
@@ -54,6 +54,6 @@ public class InstrumentedTest {
             }
         }
 
-        assertEquals("fr.charleslabs.tinwhistletabs", appContext.getPackageName());
+        assertEquals("me.guillaume.tin_whistle_tabs", appContext.getPackageName());
     }
 }

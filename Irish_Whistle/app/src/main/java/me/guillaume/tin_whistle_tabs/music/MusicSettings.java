@@ -1,4 +1,4 @@
-package fr.charleslabs.tinwhistletabs.music;
+package me.guillaume.tin_whistle_tabs.music;
 
 /**
  * Contains various music parameters defaults.

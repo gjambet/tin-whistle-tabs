@@ -1,4 +1,4 @@
-package fr.charleslabs.tinwhistletabs.dialogs;
+package me.guillaume.tin_whistle_tabs.dialogs;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
-import fr.charleslabs.tinwhistletabs.R;
+import me.guillaume.tin_whistle_tabs.R;
 
 public class AppCreditsDialog extends DialogFragment {
     @NonNull

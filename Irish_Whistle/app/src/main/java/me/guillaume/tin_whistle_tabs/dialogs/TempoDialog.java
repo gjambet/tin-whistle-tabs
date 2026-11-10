@@ -1,4 +1,4 @@
-package fr.charleslabs.tinwhistletabs.dialogs;
+package me.guillaume.tin_whistle_tabs.dialogs;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -12,9 +12,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
-import fr.charleslabs.tinwhistletabs.R;
-import fr.charleslabs.tinwhistletabs.TabActivity;
-import fr.charleslabs.tinwhistletabs.music.MusicSettings;
+import me.guillaume.tin_whistle_tabs.R;
+import me.guillaume.tin_whistle_tabs.TabActivity;
+import me.guillaume.tin_whistle_tabs.music.MusicSettings;
 
 public class TempoDialog extends DialogFragment {
     /**

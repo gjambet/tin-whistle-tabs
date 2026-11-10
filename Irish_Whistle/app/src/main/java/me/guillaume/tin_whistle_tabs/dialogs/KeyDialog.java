@@ -1,4 +1,4 @@
-package fr.charleslabs.tinwhistletabs.dialogs;
+package me.guillaume.tin_whistle_tabs.dialogs;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -10,8 +10,8 @@ import androidx.fragment.app.DialogFragment;
 
 import java.util.Objects;
 
-import fr.charleslabs.tinwhistletabs.R;
-import fr.charleslabs.tinwhistletabs.music.MusicSettings;
+import me.guillaume.tin_whistle_tabs.R;
+import me.guillaume.tin_whistle_tabs.music.MusicSettings;
 
 public class KeyDialog extends DialogFragment {
     /**

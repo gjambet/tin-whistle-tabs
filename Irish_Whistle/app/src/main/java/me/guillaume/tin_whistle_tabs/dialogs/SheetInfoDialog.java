@@ -1,4 +1,4 @@
-package fr.charleslabs.tinwhistletabs.dialogs;
+package me.guillaume.tin_whistle_tabs.dialogs;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -12,8 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
-import fr.charleslabs.tinwhistletabs.R;
-import fr.charleslabs.tinwhistletabs.music.MusicSheet;
+import me.guillaume.tin_whistle_tabs.R;
+import me.guillaume.tin_whistle_tabs.music.MusicSheet;
 
 public class SheetInfoDialog extends DialogFragment {
     private final String message;

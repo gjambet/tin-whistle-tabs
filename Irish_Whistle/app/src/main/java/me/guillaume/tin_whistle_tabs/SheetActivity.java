@@ -1,4 +1,4 @@
-package fr.charleslabs.tinwhistletabs;
+package me.guillaume.tin_whistle_tabs;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;

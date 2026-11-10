@@ -1,4 +1,4 @@
-package fr.charleslabs.tinwhistletabs.music.synth;
+package me.guillaume.tin_whistle_tabs.music.synth;
 
 public class TinWhistleSynth {
     //private final static float ENV_ATTACK = 0.15f, ENV_DECAY = 0.2f, ENV_RELEASE = 0.1f, ENV_LEVEL_SUSTAIN = 0.3f;

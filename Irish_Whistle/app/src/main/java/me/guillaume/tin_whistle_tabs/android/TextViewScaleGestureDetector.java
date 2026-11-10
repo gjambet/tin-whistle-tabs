@@ -1,4 +1,4 @@
-package fr.charleslabs.tinwhistletabs.android;
+package me.guillaume.tin_whistle_tabs.android;
 
 import android.util.TypedValue;
 import android.view.ScaleGestureDetector;
@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import fr.charleslabs.tinwhistletabs.utils.Utils;
+import me.guillaume.tin_whistle_tabs.utils.Utils;
 
 public class TextViewScaleGestureDetector extends ScaleGestureDetector.SimpleOnScaleGestureListener{
     private static final float MIN_FONT_FACTOR = 0.75f, MAX_FONT_FACTOR = 2.0f;

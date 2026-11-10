@@ -1,4 +1,4 @@
-package fr.charleslabs.tinwhistletabs.music;
+package me.guillaume.tin_whistle_tabs.music;
 
 import org.json.JSONException;
 import org.json.JSONObject;

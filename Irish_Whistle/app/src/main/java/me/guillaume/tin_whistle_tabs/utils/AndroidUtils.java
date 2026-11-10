@@ -1,4 +1,4 @@
-package fr.charleslabs.tinwhistletabs.utils;
+package me.guillaume.tin_whistle_tabs.utils;
 
 import android.text.Layout;
 import android.text.Spannable;
