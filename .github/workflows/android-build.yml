@@ -100,12 +100,16 @@ jobs:
 
       - name: Publish GitHub release
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: v${{ steps.version.outputs.version }}
-          name: ${{ steps.version.outputs.version }}
-          target_commitish: master
-          body: |
-            Automated debug APK for version `${{ steps.version.outputs.version }}`.
-          prerelease: true
-          files: TinWhistleTabs-${{ steps.version.outputs.version }}-debug.apk
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          tag="v$VERSION"
+          apk="TinWhistleTabs-$VERSION-debug.apk"
+          # Immutable releases accept assets only while they are drafts.
+          gh release create "$tag" "$apk" \
+            --draft --prerelease \
+            --target "$(git rev-parse HEAD)" \
+            --title "$VERSION" \
+            --notes "Automated debug APK for version \`$VERSION\`."
+          gh release edit "$tag" --draft=false
